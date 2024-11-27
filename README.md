@@ -27,3 +27,5 @@ git push (nome do remote) (nome da branch): manda as alterações locais para o 
 git pull (nome do remote) (nome da branch): pega as alterações do repositório remoto e coloca no diretório local
 
 git fetch: atualiza o histórico local de acordo com o histórico salvo no repositório remoto
+
+comentário
