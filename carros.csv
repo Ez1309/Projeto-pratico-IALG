@@ -1,0 +1,21 @@
+Placa,Marca,Modelo,Cor,Ano,Quilometragem,Categoria,Descrição,Preço Diário,Disponibilidade,Nome do Locador
+QAZ6332,Fiat,Uno,Preto,2015,125600,Hatch,"Carro compacto, ideal para o dia a dia urbano.",120.50,A,Joao Silva
+KBC2S55,Ford,Focus,Branco,2019,36000,SUV,"Veiculo esportivo com alto desempenho e design arrojado.",200.75,D,Sem locador
+CBD6O06,Kia,Seltos,Azul,2020,85000,Seda,"SUV robusto, perfeito para viagens em estradas e terrenos irregulares.",350.90,A,Carlos Souza
+SGR4464,Hyundai,HB20,Vermelho,2018,150000,Esportivo,"Picape resistente, ideal para transporte de cargas pesadas.",90.00,D,Sem locador
+PTR5T52,Nissan,Versa,Prata,2017,45000,Picape,"Seda de luxo com conforto e tecnologia avançada.",450.30,A,Fernanda Pereira
+HGP6I98,Mercedes-Benz,Classe A,Cinza,2016,32000,Crossover,"Crossover moderno, combina praticidade e estilo.",250.25,A,Paulo Santos
+KTJ5H69,Aston Martin,DB11,Amarelo,2021,76000,Coupe,"Carro eletrico com excelente autonomia e baixo custo de manutençao.",180.00,D,Sem locador
+IRO8065,Chevrolet,Onix,Verde,2022,98000,Furgao,"Minivan espaçosa, ideal para familias grandes.",350.00,A,Maria Oliveira
+BQD0304,Volkswagen,Gol,Laranja,2020,130000,Minivan,"Furgao de carga, ótimo para transportes comerciais.",75.80,D,Sem locador
+KYB6959,BMW,Serie 3,Roxo,2014,54000,Conversivel,"Modelo conversivel, perfeito para curtir dias de sol.",180.50,A,Joao Silva
+TLK7P41,Toyota,Corolla,Bege,2013,60000,Compacto,"Hatch compacto, econômico e agil para o trânsito intenso.",400.00,D,Carlos Souza
+JTC7O68,Honda,Civic,Marrom,2011,112000,Luxo,"Superesportivo de alta performance, projetado para velocidade.",320.00,A,Sem locador
+TSN8F24,Renault,Kwid,Dourado,2018,23000,Compacto,"Carro hibrido com motor eficiente e baixo impacto ambiental.",95.90,A,Fernanda Pereira
+UWS6M69,Peugeot,208,Azul,2017,78000,Superesportivo,"Station wagon confortavel, ideal para viagens longas.",270.40,D,Sem locador
+SOM3S96,Audi,A3,Verde,2021,41000,Wagon,"Veiculo off-road preparado para aventuras em terrenos dificeis.",220.60,A,Paulo Santos
+FLH3T38,Land Rover,Range Rover,Cinza,2019,67000,Eletrico,"Roadster esportivo de dois lugares, perfeito para quem busca performance.",150.00,D,Maria Oliveira
+REY7590,Jaguar,F-Type,Preto,2015,99000,Hibrido,"Carro de luxo com acabamentos refinados e tecnologias de ponta.",130.00,A,Sem locador
+YHA5252,Subaru,Impreza,Branco,2014,85000,Off-road,"Compacto premium, ideal para quem busca sofisticaçao e economia.",500.00,D,Carlos Souza
+RYN3S66,Porsche,911,Vermelho,2023,56000,Utilitario,"SUV de porte medio, ótimo para passeios e uso diario.",275.00,A,Joao Silva
+MQO8211,Mazda,CX-5,Amarelo,2016,124000,Cabriolet,"Coupe elegante, com design sofisticado e motor potente.",180.00,A,Paulo Santos
