@@ -25,6 +25,13 @@ int main(){
 
     SetConsoleOutputCP(CP_UTF8);
 
+    cout << endl << endl << "BEM VINDO À";
+    ifstream titulo ("teste.txt");
+    string linhaTitulo;
+    while (getline(titulo, linhaTitulo)){
+        cout << linhaTitulo << endl;
+    }
+    cout << endl;
     ifstream arquivo("carros.csv");
     string linha;
     getline(arquivo, linha);
