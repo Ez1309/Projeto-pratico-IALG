@@ -1,21 +1,151 @@
-Placa,Marca,Modelo,Cor,Ano,Quilometragem,Categoria,Descrição,Preço Diário,Disponibilidade,Nome do Locador
-QAZ6332,Fiat,Uno,Preto,2015,125600,Hatch,"Carro compacto, ideal para o dia a dia urbano.",120.50,A,Joao Silva
-KBC2S55,Ford,Focus,Branco,2019,36000,SUV,"Veiculo esportivo com alto desempenho e design arrojado.",200.75,D,Sem locador
-CBD6O06,Kia,Seltos,Azul,2020,85000,Seda,"SUV robusto, perfeito para viagens em estradas e terrenos irregulares.",350.90,A,Carlos Souza
-SGR4464,Hyundai,HB20,Vermelho,2018,150000,Esportivo,"Picape resistente, ideal para transporte de cargas pesadas.",90.00,D,Sem locador
-PTR5T52,Nissan,Versa,Prata,2017,45000,Picape,"Seda de luxo com conforto e tecnologia avançada.",450.30,A,Fernanda Pereira
-HGP6I98,Mercedes-Benz,Classe A,Cinza,2016,32000,Crossover,"Crossover moderno, combina praticidade e estilo.",250.25,A,Paulo Santos
-KTJ5H69,Aston Martin,DB11,Amarelo,2021,76000,Coupe,"Carro eletrico com excelente autonomia e baixo custo de manutençao.",180.00,D,Sem locador
-IRO8065,Chevrolet,Onix,Verde,2022,98000,Furgao,"Minivan espaçosa, ideal para familias grandes.",350.00,A,Maria Oliveira
-BQD0304,Volkswagen,Gol,Laranja,2020,130000,Minivan,"Furgao de carga, ótimo para transportes comerciais.",75.80,D,Sem locador
-KYB6959,BMW,Serie 3,Roxo,2014,54000,Conversivel,"Modelo conversivel, perfeito para curtir dias de sol.",180.50,A,Joao Silva
-TLK7P41,Toyota,Corolla,Bege,2013,60000,Compacto,"Hatch compacto, econômico e agil para o trânsito intenso.",400.00,D,Carlos Souza
-JTC7O68,Honda,Civic,Marrom,2011,112000,Luxo,"Superesportivo de alta performance, projetado para velocidade.",320.00,A,Sem locador
-TSN8F24,Renault,Kwid,Dourado,2018,23000,Compacto,"Carro hibrido com motor eficiente e baixo impacto ambiental.",95.90,A,Fernanda Pereira
-UWS6M69,Peugeot,208,Azul,2017,78000,Superesportivo,"Station wagon confortavel, ideal para viagens longas.",270.40,D,Sem locador
-SOM3S96,Audi,A3,Verde,2021,41000,Wagon,"Veiculo off-road preparado para aventuras em terrenos dificeis.",220.60,A,Paulo Santos
-FLH3T38,Land Rover,Range Rover,Cinza,2019,67000,Eletrico,"Roadster esportivo de dois lugares, perfeito para quem busca performance.",150.00,D,Maria Oliveira
-REY7590,Jaguar,F-Type,Preto,2015,99000,Hibrido,"Carro de luxo com acabamentos refinados e tecnologias de ponta.",130.00,A,Sem locador
-YHA5252,Subaru,Impreza,Branco,2014,85000,Off-road,"Compacto premium, ideal para quem busca sofisticaçao e economia.",500.00,D,Carlos Souza
-RYN3S66,Porsche,911,Vermelho,2023,56000,Utilitario,"SUV de porte medio, ótimo para passeios e uso diario.",275.00,A,Joao Silva
-MQO8211,Mazda,CX-5,Amarelo,2016,124000,Cabriolet,"Coupe elegante, com design sofisticado e motor potente.",180.00,A,Paulo Santos
+Placa,Marca,Modelo,Cor,Ano,Quilometragem,Categoria,Descriçao,Preço Diario,Disponibilidade,Nome do locador
+MDD3028,Jeep,Compass,Branco,2017,84043,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",466.07,A,Ana Cardoso
+GCT8271,BMW,X3,Prata,2015,137179,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",496.67,D,Disponivel
+WSF6078,Audi,A3,Cinza,2018,57163,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",379.33,A,Carlos Ferreira
+VFF7183,Jeep,Renegade,Bege,2022,15758,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",279.83,D,Disponivel
+RCQ8P21,Chevrolet,Celta,Bege,2004,192951,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",198.72,A,Gustavo Santos
+WVZ3G73,Audi,A3,Cinza,2023,13153,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",293.87,A,Renato Santos
+CWM6274,Mercedes-Benz,C180,Azul,2012,121137,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",459.54,A,Camila Souza
+LZB2691,Mercedes-Benz,C180,Bege,2006,207169,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",414.67,D,Disponivel
+TUZ2M20,Fiat,Toro,Preto,2005,184638,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",187.71,A,Renato Martins
+ZIS4329,Nissan,March,Cinza,2022,1810,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",100.49,A,Juliana Costa
+IQA3U29,Fiat,Toro,Marrom,2003,157562,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",222.95,A,Maria Mendes
+XMT7054,Chevrolet,S10,Preto,2004,294760,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",318.15,D,Disponivel
+AFU8883,Audi,A4,Cinza,2016,148380,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",365.38,D,Disponivel
+EWA8070,Audi,A3,Bege,2008,227123,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",274.13,D,Disponivel
+XFV1417,Chevrolet,Prisma,Verde,2000,177859,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",133.82,D,Disponivel
+JPB1Y88,Ford,EcoSport,Bege,2021,48534,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",207.77,D,Disponivel
+ETW7753,Mercedes-Benz,A200,Branco,2005,209371,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",400.86,D,Disponivel
+DJB6M19,Jeep,Compass,Bege,2012,81766,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",370.27,A,Rafael Santos
+ZCJ2V01,Chevrolet,Celta,Amarelo,2022,10410,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",204.61,D,Disponivel
+DCG9876,Jeep,Compass,Marrom,2014,122396,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",499.08,A,Luciana Oliveira
+TSH1Z43,Honda,Civic,Vermelho,2004,170639,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",185.83,D,Disponivel
+ZQK0S05,Toyota,Corolla,Vermelho,2012,83797,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",274.08,D,Disponivel
+VIH8268,Volkswagen,Jetta,Verde,2000,273948,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",268.65,A,Renato Mendes
+XCJ8133,Peugeot,2008,Marrom,2014,148287,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",235.32,A,Carlos Costa
+GCM7E98,Volkswagen,Voyage,Branco,2003,168300,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",145.81,A,Maria Lima
+GRR3473,Honda,Fit,Preto,2022,2791,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",141.68,A,Renato Santos
+SUJ8B19,Audi,A3,Branco,2020,52326,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",309.03,D,Disponivel
+OYQ9Z42,Mercedes-Benz,C180,Marrom,2001,188273,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",522.13,D,Disponivel
+JZT1031,Renault,Logan,Amarelo,2017,112408,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",129.05,D,Disponivel
+EBK6450,,Palio,Amarelo,2018,77750,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",207.35,A,Juliana Silva
+DUP0C39,BMW,X1,Vermelho,2002,228476,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",463.47,A,Fernanda Souza
+WZI7V37,Hyundai,Creta,Preto,2000,258382,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",238.81,D,Disponivel
+DIN4T11,Fiat,Mobi,Laranja,2013,88457,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",132.82,A,Ana Gomes
+LKF5F52,Nissan,March,Prata,2009,209119,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",100.96,D,Disponivel
+UWH0571,Fiat,Argo,Vermelho,2002,264158,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",141.14,D,Disponivel
+NAR1588,Nissan,Frontier,Cinza,2002,212290,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",333.42,A,Lucas Silva
+WQY4R64,Fiat,Strada,Branco,2022,4944,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",161.02,D,Disponivel
+USB2P70,Volkswagen,Voyage,Laranja,2018,30896,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",127.86,A,Ana Ribeiro
+NAC6T63,Volkswagen,Saveiro,Branco,2008,162912,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",163.72,A,Camila Souza
+FLN3344,Nissan,Versa,Prata,2008,221811,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",229.83,A,Camila Mendes
+OWN2T46,Volkswagen,Amarok,Branco,2007,278964,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",380.6,A,Rafael Ribeiro
+NKB0J20,Hyundai,Tucson,Branco,2020,41554,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",425.95,A,Renato Gomes
+GYT0W95,Fiat,Toro,Vermelho,2014,112005,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",220.54,A,Luciana Almeida
+YJM8M72,Chevrolet,Prisma,Prata,2011,116252,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",124.95,D,Disponivel
+JRX0795,Nissan,Frontier,Cinza,2001,196994,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",277.96,D,Disponivel
+YKD3U47,Honda,CR-V,Prata,2019,59004,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",239.72,A,Rafael Mendes
+NGF7508,Audi,A4,Amarelo,2017,126223,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",563.24,A,Carlos Gomes
+HZI9839,Toyota,Corolla,Branco,2003,199263,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",248.29,A,Camila Rodrigues
+UBB9431,BMW,X3,Vermelho,2010,130689,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",380.51,D,Disponivel
+TKQ4654,Nissan,Frontier,Cinza,2019,48430,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",314.34,A,Paulo Almeida
+VYI6U14,Honda,HR-V,Laranja,2005,249431,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",202.05,A,Renato Santos
+SOP4767,Honda,HR-V,Preto,2004,209486,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",269.7,D,Disponivel
+ZNF2J82,Hyundai,Tucson,Laranja,2019,44652,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",332.56,D,Disponivel
+BAF8J23,Fiat,Siena,Vermelho,2000,257212,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",145.46,A,Luciana Lima
+SHQ4698,Chevrolet,S10,Amarelo,2000,238376,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",351.78,D,Disponivel
+FTV4P78,BMW,320i,Azul,2014,87169,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",581.83,D,Disponivel
+CTQ1P97,Ford,Fusion,Cinza,2008,227551,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",289.73,D,Disponivel
+LNN3484,,Palio,Verde,2006,267448,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",145.92,D,Disponivel
+DVM1963,Honda,HR-V,Verde,2005,278095,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",237.98,A,Paulo Oliveira
+CVV4U12,Nissan,Versa,Vermelho,2023,14070,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",296.69,A,Camila Mendes
+FVH5I30,Hyundai,Tucson,Prata,2009,164266,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",374.83,D,Disponivel
+WNX1L77,Toyota,Hilux,Cinza,2015,83488,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",254.91,A,Ana Almeida
+JOT4997,Toyota,Corolla,Vermelho,2022,18531,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",269.62,A,Lucas Oliveira
+BQQ1422,Fiat,Toro,Cinza,2002,234559,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",189.08,D,Disponivel
+PSU8Z72,Audi,A3,Prata,2009,276410,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",255.5,D,Disponivel
+QJM3D90,Hyundai,Tucson,Marrom,2023,4188,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",479.67,D,Disponivel
+WDR6823,Fiat,Toro,Vermelho,2013,116839,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",167.02,A,Renato Costa
+DJN5349,Renault,Logan,Verde,2010,127132,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",144.02,A,Tatiane Souza
+JWR6A45,Ford,Ranger,Verde,2018,48495,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",388.65,A,Paulo Costa
+DUT9B74,Mercedes-Benz,A200,Cinza,2019,76699,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",387.98,D,Disponivel
+ANH9J87,Chevrolet,Celta,Amarelo,2016,114721,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",157.2,A,Camila Silva
+UQV7799,Toyota,Hilux,Azul,2012,93880,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",258.62,A,Tatiane Gomes
+SCK1688,Volkswagen,Amarok,Preto,2011,138316,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",300.13,A,Camila Martins
+FRD2Z33,Mercedes-Benz,A200,Cinza,2023,9994,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",413.67,A,Fernanda Pereira
+CXB5Q98,Fiat,Argo,Verde,2011,112999,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",129.68,A,Maria Almeida
+MFB0175,Mercedes-Benz,A200,Laranja,2011,86194,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",358.99,D,Disponivel
+YKY5L70,Honda,City,Prata,2023,16570,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",148.18,A,Paulo Silva
+HKX4417,Volkswagen,Jetta,Cinza,2006,214760,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",249.42,D,Disponivel
+POJ4R19,Mercedes-Benz,A200,Vermelho,2021,46321,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",406.24,D,Disponivel
+RAN3M82,Mercedes-Benz,C180,Bege,2019,45188,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",557.56,A,Renato Silva
+VZE7742,Honda,CR-V,Bege,2006,285693,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",191.09,A,Gustavo Rodrigues
+UDX7354,Volkswagen,Amarok,Vermelho,2012,144339,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",342.31,A,Renato Costa
+TFB5782,BMW,320i,Azul,2006,251170,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",594.72,A,Gustavo Pereira
+AXI9M67,Chevrolet,Corsa,Amarelo,2022,4906,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",147.24,A,Jose Silva
+PWK6C19,Chevrolet,Classic,Cinza,2003,169575,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",153.35,D,Disponivel
+JIJ6623,BMW,320i,Verde,2005,162076,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",474.68,D,Disponivel
+BNC5355,Renault,Kwid,Azul,2023,11928,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",146.67,D,Disponivel
+WCT4C27,Renault,Sandero,Laranja,2006,247124,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",165.04,A,Ana Rodrigues
+SWK5Y63,Fiat,Siena,Preto,2005,156752,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",151.44,A,Paulo Mendes
+PFV0L57,Ford,Ka,Amarelo,2004,272027,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",145.41,A,Paulo Almeida
+QCU4036,Honda,Civic,Vermelho,2002,169131,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",190.33,D,Disponivel
+LTW8678,Nissan,March,Cinza,2019,48533,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",114.18,A,Tatiane Ferreira
+LBO7R87,Volkswagen,Gol,Prata,2013,93922,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",168.64,D,Disponivel
+BCU0387,BMW,X3,Preto,2004,189960,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",344.6,D,Disponivel
+WCV7D16,Fiat,Argo,Branco,2023,1161,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",136.05,D,Disponivel
+DPG6508,Chevrolet,S10,Cinza,2022,10114,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",252.98,D,Disponivel
+NFY5073,Volkswagen,Saveiro,Branco,2021,43749,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",212.04,D,Disponivel
+MHS5W72,Hyundai,Creta,Preto,2005,159559,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",210.93,A,Maria Pereira
+WCJ8297,Volkswagen,Jetta,Branco,2018,37543,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",225.97,A,Paulo Almeida
+DXV2Y12,Volkswagen,Fox,Cinza,2013,125180,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",181.0,D,Disponivel
+ZAD8018,Jeep,Compass,Branco,2004,154035,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",418.62,A,Tatiane Martins
+IAG4I82,Audi,A4,Marrom,2008,258577,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",386.43,A,Lucas Santos
+TNB6F31,Nissan,Frontier,Laranja,2007,186795,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",327.05,A,Renato Martins
+ZOB0284,Nissan,Frontier,Laranja,2010,96431,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",268.31,D,Disponivel
+ENE3N05,Chevrolet,S10,Laranja,2007,204904,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",390.45,D,Disponivel
+VDF5D77,Mercedes-Benz,C180,Branco,2021,60275,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",518.15,D,Disponivel
+FIH0B05,Fiat,Toro,Vermelho,2004,218212,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",226.18,D,Disponivel
+TJV1215,Volkswagen,Jetta,Laranja,2017,120416,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",224.67,D,Disponivel
+OFU7E42,Mercedes-Benz,A200,Amarelo,2013,103690,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",416.73,A,Luciana Rodrigues
+VAQ3X76,Mercedes-Benz,A200,Bege,2012,112084,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",372.47,D,Disponivel
+GEV9M12,BMW,X3,Verde,2006,228695,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",431.21,A,Juliana Santos
+ITO7I12,Nissan,March,Prata,2014,122266,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",145.82,A,Juliana Pereira
+QPD9692,Audi,A3,Verde,2024,14002,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",280.06,D,Disponivel
+VKG8K51,Fiat,Pulse,Bege,2007,218790,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",258.56,D,Disponivel
+BQU3739,BMW,X1,Marrom,2016,110802,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",429.56,D,Disponivel
+OLJ1350,Renault,Duster,Azul,2013,139841,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",212.88,D,Disponivel
+TOO8V25,Honda,HR-V,Laranja,2023,12090,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",204.48,A,Lucas Cardoso
+JMH6D72,,Palio,Verde,2000,267587,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",196.51,D,Disponivel
+WAI7I82,Fiat,Strada,Prata,2024,5914,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",207.56,A,Paulo Rodrigues
+VOC3762,BMW,320i,Preto,2004,275589,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",503.62,A,Lucas Souza
+BPH6Z71,Renault,Logan,Laranja,2010,94800,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",133.01,D,Disponivel
+FCF2Z24,Volkswagen,Saveiro,Laranja,2011,91957,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",220.14,D,Disponivel
+VYG3669,Chevrolet,Celta,Laranja,2003,291643,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",196.5,D,Disponivel
+JAO8459,Audi,A4,Branco,2020,74071,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",366.83,D,Disponivel
+VTT4730,Peugeot,2008,Prata,2012,96150,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",246.33,D,Disponivel
+FQV5542,Honda,Civic,Marrom,2000,286070,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",243.59,A,Carlos Ribeiro
+PAI8179,Honda,Civic,Preto,2004,257715,Seda Medio,"carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",278.98,D,Disponivel
+ZME1800,Renault,Sandero,Cinza,2017,85985,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",132.43,A,Ana Ferreira
+OBV7264,Nissan,Kicks,Branco,2014,94272,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",255.28,A,Juliana Costa
+ALE9P37,Fiat,Strada,Branco,2014,135491,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",188.0,D,Disponivel
+EDE3675,Nissan,Kicks,Verde,2015,96826,SUV Compacto,"carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",185.65,A,Paulo Martins
+GNW1183,Renault,Logan,Marrom,2014,111472,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",124.47,D,Disponivel
+QUD3M00,Mercedes-Benz,C180,Vermelho,2004,288078,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",455.59,D,Disponivel
+UFK3V76,,Palio,Amarelo,2000,226857,Hatch Medio,"carro espaçoso, confortavel e econômico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",215.33,A,Paulo Oliveira
+GCM3J14,Toyota,Hilux,Laranja,2016,83954,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",371.57,D,Disponivel
+LXN6L67,Mercedes-Benz,C180,Preto,2004,222676,Seda Premium,"carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrao, com design e desempenho excepcionais.",598.02,A,Tatiane Oliveira
+XLP2M85,Chevrolet,Prisma,Branco,2003,229867,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",107.71,D,Disponivel
+QGP6123,Chevrolet,S10,Azul,2009,165537,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",291.16,D,Disponivel
+QPJ2W62,Hyundai,Tucson,Bege,2010,104356,SUV Medio,"carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",311.47,A,Fernanda Pereira
+DOT5349,Peugeot,208,Branco,2021,44378,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",108.85,D,Disponivel
+UWH8P65,Honda,Fit,Amarelo,2022,6642,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",122.69,D,Disponivel
+GAO0H08,Chevrolet,S10,Vermelho,2013,147486,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",275.28,A,Maria Mendes
+YBR0M32,Fiat,Toro,Preto,2005,230238,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",169.03,A,Lucas Gomes
+ZZZ1625,Toyota,Etios,Amarelo,2004,231112,Hatch Compacto,"carro compacto, pratico e econômico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",142.43,D,Disponivel
+EEA1Y68,Fiat,Toro,Vermelho,2003,224114,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",156.78,A,Camila Gomes
+OTA9L97,Audi,A3,Marrom,2008,198937,Hatch Premium,"carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",380.75,A,Camila Ferreira
+DLF5039,Toyota,Hilux,Amarelo,2016,130809,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",346.92,A,Luciana Santos
+ZPJ3957,Volkswagen,Saveiro,Verde,2000,177078,Picape Compacta,"carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",156.61,A,Carlos Oliveira
+JKT4005,Renault,Sandero,Verde,2020,54027,Seda Compacto,"carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",116.78,A,Tatiane Cardoso
+FQW6692,Nissan,Frontier,Branco,2007,189730,Picape Media,"carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",388.21,D,Disponivel

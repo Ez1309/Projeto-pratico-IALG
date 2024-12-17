@@ -30,9 +30,9 @@ int main(){
     string linha;
     getline(arquivo, linha);
 
-    veiculo carros[21];
+    veiculo carros[151];
 
-    for(int i=0; i<21; i++){
+    for(int i=0; i<151; i++){
         char lixo;
         getline(arquivo, carros[i].placa, ',');
         getline(arquivo, carros[i].fabricante, ',');
@@ -104,7 +104,7 @@ int main(){
     cout << "├─────────┼───────────────┼────────────┼──────────┼──────┼───────────────┼────────────────┼──────────────┼─────────────────┼────────────────────┤" << endl;
 
     // Exibir os dados das 20 linhas
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 150; i++) {
         cout << "│"
              << setw(colPlaca) << left << carros[i].placa
              << setw(colBarra) << "│"
@@ -132,13 +132,13 @@ int main(){
              << "│" << endl;
 
         // Exibir a linha de separação após cada linha
-        if (i == 19)
+        if (i == 149)
             cout << "╰─────────┴───────────────┴────────────┴──────────┴──────┴───────────────┴────────────────┴──────────────┴─────────────────┴────────────────────╯" << endl;
         else
             cout << "├─────────┼───────────────┼────────────┼──────────┼──────┼───────────────┼────────────────┼──────────────┼─────────────────┼────────────────────┤" << endl;
   
     }
-    for (int i=0; i<20; i++){
+    for (int i=0; i<150; i++){
         cout << "Carro " << i+1 << ": ";
         cout << carros[i].descricao << endl;
     }
