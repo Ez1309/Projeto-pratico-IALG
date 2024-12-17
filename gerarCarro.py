@@ -83,18 +83,17 @@ def gerar_carro():
         "Mercedes-Benz":["C180", "A200"],
         "Audi":["A3", "A4", "Q3"],
     }
-    categorias_modelos = {
-        "Hatch Compacto":["Mobi", "Argo", "Fit", "Ka", "Etios", "Yaris", "208", "March", "HB20", "Kwid"],
-        "Hatch Medio": ["Gol", "Fox", "Polo", "Onix", "Corsa", "Celta", "Classic", "Palio", "Uno", "Fiesta"],
-        "Hatch Premium": ["A3", "A200"],
-        "Seda Compacto": ["Voyage", "Prisma", "Siena", "City", "Sandero", "Logan"],
-        "Seda Medio": ["Jetta", "Civic", "Corolla", "Fusion", "Versa"],
-        "Seda Premium": ["320i", "C180", "A4"],
-        "Picape Compacta": ["Saveiro", "Toro", "Strada"],
-        "Picape Media": ["Amarok", "S10", "Hilux", "Ranger", "Frontier"],
-        "SUV Compacto": ["Pulse", "HR-V", "CR-V", "EcoSport", "2008", "Kicks", "Creta", "Duster", "Renegade", "Q3"],
-        "SUV Medio": ["Tucson", "Compass", "X1", "X3"],
-    }
+   
+        "Hatch Compacto":
+        "Hatch Medio": 
+        "Hatch Premium":
+        "Seda Compacto": 
+        "Seda Medio":
+        "Seda Premium": 
+        "Picape Compacta":
+        "Picape Media": 
+        "SUV Compacto"
+        "SUV Medio"
     categorias_descricao = {
         "Hatch Compacto": "carro compacto, pratico e economico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",
         "Hatch Medio": "carro espaçoso, confortavel e economico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",
