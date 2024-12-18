@@ -14,7 +14,7 @@
 using namespace std;
 
 void limpar();
-void menu();
+void menu();    
 int larguraTerminal();
 
 void menu() {
