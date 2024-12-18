@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <sstream>
 #include <string>
-
+#include <cstring>
 
 #include "menu.cpp"
 
@@ -30,27 +30,35 @@ int main(){
     string linha;
     getline(arquivo, linha);
 
-    veiculo carros[151];
+    int tamanho = 40;
+    veiculo *carros = new veiculo[40];
 
-    for(int i=0; i<151; i++){
+    while(getline(arquivo, linha)){
+        if (tamanho > 40){
+            veiculo *temp = new veiculo[tamanho+1];
+            memcpy(temp, carros, sizeof(veiculo) * tamanho);
+            delete [] carros;
+            carros = temp;
+        }
         char lixo;
-        arquivo.getline(carros[i].placa, 8, ',');
-        arquivo.getline(carros[i].fabricante, 14, ',');
-        arquivo.getline(carros[i].modelo, 9, ',');
-        arquivo.getline(carros[i].cor, 9, ',');
-        arquivo >> carros[i].ano;
+        arquivo.getline(carros[tamanho].placa, 8, ',');
+        arquivo.getline(carros[tamanho].fabricante, 14, ',');
+        arquivo.getline(carros[tamanho].modelo, 9, ',');
+        arquivo.getline(carros[tamanho].cor, 9, ',');
+        arquivo >> carros[tamanho].ano;
         arquivo.ignore();
-        arquivo >> carros[i].quilometragem;
+        arquivo >> carros[tamanho].quilometragem;
         arquivo.ignore();
-        arquivo.getline(carros[i].categoria, 16, ',');
+        arquivo.getline(carros[tamanho].categoria, 16, ',');
         arquivo >> lixo;
-        arquivo.getline(carros[i].descricao, 166, '"');
+        arquivo.getline(carros[tamanho].descricao, 166, '"');
         arquivo >> lixo;
-        arquivo >> carros[i].preco;
+        arquivo >> carros[tamanho].preco;
         arquivo.ignore();
-        arquivo >> carros[i].disponibilidade;
+        arquivo >> carros[tamanho].disponibilidade;
         arquivo.ignore();
-        arquivo.getline(carros[i].locador, 21, '\n');
+        arquivo.getline(carros[tamanho].locador, 21, '\n');
+        tamanho++;
 
     }
 
@@ -65,8 +73,6 @@ int main(){
     int colPreco = 14;
     int colDisponibilidade = 17;
     int colLocador = 20;
-
-    // ╭ ╮ ╰ ╯ ┬ ┴ ┼ ─
 
     // Códigos ANSI para negrito
     const string bold_on = "\033[1m";
