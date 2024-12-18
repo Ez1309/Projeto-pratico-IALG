@@ -61,7 +61,7 @@ int main(){
     int colCor = 10;
     int colAno = 6;
     int colQuilometros = 15;
-    int colCategoria = 16;
+    int colCategoria = 17;
     int colPreco = 14;
     int colDisponibilidade = 17;
     int colLocador = 20;
@@ -78,7 +78,7 @@ int main(){
     
     // Cabeçalho
     cout << "│"
-         << bold_on
+         //<< bold_on
          << setw(colPlaca) << left << " PLACA "
          << setw(colBarra) << "│"
          << setw(colFabricante) << left << " FABRICANTE "
@@ -93,50 +93,44 @@ int main(){
          << setw(colBarra) << "│"
          << setw(colCategoria) << left << " CATEGORIA "
          << setw(colBarra) << "│"
-         << setw(colPreco) << left << " PREÇO DIÁRIO "
+         << setw(colPreco) << left << " PREÇO DIáRIO "
          << setw(colBarra) << "│"
          << setw(colDisponibilidade) << left << " DISPONIBILIDADE "
          << setw(colBarra) << "│"
          << setw(colLocador) << left << " LOCADOR "
-         << bold_off
+         //<< bold_off
          << "│" << endl;
     
-    cout << "├─────────┼───────────────┼────────────┼──────────┼──────┼───────────────┼────────────────┼──────────────┼─────────────────┼────────────────────┤" << endl;
+    cout << "├─────────┼───────────────┼────────────┼──────────┼──────┼───────────────┼────────────────┼──────────────┼─────────────────┼────────────────────╮" << endl;
+    
 
     // Exibir os dados das 20 linhas
     for (int i = 0; i < 150; i++) {
-        cout << "│"
-             << setw(colPlaca) << left << carros[i].placa
-             << setw(colBarra) << "│"
-             << setw(colFabricante) << left << carros[i].fabricante
-             << setw(colBarra) << "│"
-             << setw(colModelo) << left << carros[i].modelo
-             << setw(colBarra) << "│"
-             << setw(colCor) << left << carros[i].cor
-             << setw(colBarra) << "│"
-             << setw(colAno) << left << carros[i].ano
-             << setw(colBarra) << "│"
-             << setw(colQuilometros) << left << to_string(carros[i].quilometragem) + " Km"
-             << setw(colBarra) << "│"
-             << setw(colCategoria) << left << carros[i].categoria
-             << setw(colBarra) << "│"
-             << setw(colBarra) << "R$ "
-             << setw(colPreco-3) << left << fixed << setprecision(2) << carros[i].preco
-             << setw(colBarra) << "│";
-             if (carros[i].disponibilidade == 'A')
-        cout << setw(colDisponibilidade) << left << "Alugado";
-             else
-        cout << setw(colDisponibilidade) << left << "Disponivel";
-        cout << setw(colBarra) << "│"
-             << setw(colLocador) << left << carros[i].locador
-             << "│" << endl;
+            // Cabeçalho
+    cout << "│"
+         //<< bold_on
+         << setw(colPlaca) << left << carros[i].placa
+         << setw(colBarra) << "│"
+         << setw(colFabricante) << left << carros[i].fabricante
+         << setw(colBarra) << "│"
+         << setw(colModelo) << left << carros[i].modelo
+         << setw(colBarra) << "│"
+         << setw(colCor) << left << carros[i].cor
+         << setw(colBarra) << "│"
+         << setw(colAno) << left << carros[i].ano
+         << setw(colBarra) << "│"
+         << setw(colQuilometros) << left << carros[i].quilometragem
+         << setw(colBarra) << "│"
+        << " " << setw(colCategoria) << left << carros[i].categoria
+         << setw(colBarra) << "│"
+         << setw(colPreco) << left << carros[i].preco
+         << setw(colBarra) << "│"
+         << setw(colDisponibilidade) << left << carros[i].disponibilidade
+         << setw(colBarra) << "│"
+         << setw(colLocador) << left << carros[i].locador
+         //<< bold_off
+         << "│" << endl;
 
-        // Exibir a linha de separação após cada linha
-        if (i == 149)
-            cout << "╰─────────┴───────────────┴────────────┴──────────┴──────┴───────────────┴────────────────┴──────────────┴─────────────────┴────────────────────╯" << endl;
-        else
-            cout << "├─────────┼───────────────┼────────────┼──────────┼──────┼───────────────┼────────────────┼──────────────┼─────────────────┼────────────────────┤" << endl;
-  
     }
     for (int i=0; i<150; i++){
         cout << "Carro " << i+1 << ": ";
