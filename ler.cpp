@@ -34,29 +34,42 @@ int main(){
     veiculo *carros;
     carros = new veiculo[40];
 
-    while(tamanho < 151){
-        cout << linha << endl << endl;
+    // Ler os dados até chegar ao fim do arquivo
+    while(!arquivo.eof()){
+        // Condicional para redimensionar o vetor caso ele tenha mais de 40 elementos
         if (tamanho >= 40){
             veiculo *temp = new veiculo [tamanho + 1];
             copy(carros, carros+tamanho, temp);
             delete [] carros;
             carros = temp;
         }
-        char lixo;
+        // Leitura da placa, fabricante, modelo e cor
         arquivo.getline(carros[tamanho].placa, 8, ',');
         arquivo.getline(carros[tamanho].fabricante, 14, ',');
         arquivo.getline(carros[tamanho].modelo, 9, ',');
         arquivo.getline(carros[tamanho].cor, 9, ',');
+
+        // Leitura do ano ignorando a vírgula
         arquivo >> carros[tamanho].ano;
         arquivo.ignore();
+
+        // Leitura da quilometragem ignorando a vírgula
         arquivo >> carros[tamanho].quilometragem;
         arquivo.ignore();
+
+        // Leitura da categoria
         arquivo.getline(carros[tamanho].categoria, 16, ',');
-        arquivo >> lixo;
+
+        // Leitura da descrição ignorando as primeiras aspas " e a vírgula
+        arquivo.ignore();
         arquivo.getline(carros[tamanho].descricao, 166, '"');
-        arquivo >> lixo;
+        arquivo.ignore();
+
+        // Leitura do preço ignorando a vírgula
         arquivo >> carros[tamanho].preco;
-        arquivo >> lixo;
+        arquivo.ignore();
+
+        // Leitura da disponibilidade e do locador
         arquivo.getline(carros[tamanho].disponibilidade, 12, ',');
         arquivo.getline(carros[tamanho].locador, 21, '\n');
         tamanho++;
