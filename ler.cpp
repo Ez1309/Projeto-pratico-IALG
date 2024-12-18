@@ -29,37 +29,59 @@ int main(){
     ifstream arquivo("carrosGrande.csv");
     string linha;
     getline(arquivo, linha);
+    cout << "Li o cabeçalho" << endl;
 
     int tamanho = 40;
+    cout << "Defini o tamanho" << endl;
     veiculo *carros = new veiculo[40];
+    cout << "Criei o vetor de veiculos 40 tamanhos" << endl;
 
     while(getline(arquivo, linha)){
+        cout << "Entrei no while loop" << endl;
         if (tamanho > 40){
+            cout << "Entrei no if" << endl;
             veiculo *temp = new veiculo[tamanho+1];
+            cout << "Criei o vetor temporario" << endl;
             memcpy(temp, carros, sizeof(veiculo) * tamanho);
+            cout << "Copiei o vetor" << endl;
             delete [] carros;
+            cout << "Deletei o antigo" << endl;
             carros = temp;
+            cout << "Atualizei o vetor" << endl;
         }
         char lixo;
+        cout << "Li o lixo" << endl;
         arquivo.getline(carros[tamanho].placa, 8, ',');
+        cout << "Li a placa" << endl;
         arquivo.getline(carros[tamanho].fabricante, 14, ',');
+        cout << "Li o fabricante" << endl;
         arquivo.getline(carros[tamanho].modelo, 9, ',');
+        cout << "Li o modelo" << endl;
         arquivo.getline(carros[tamanho].cor, 9, ',');
+        cout << "Li a cor" << endl;
         arquivo >> carros[tamanho].ano;
+        cout << "Li o ano" << endl;
         arquivo.ignore();
         arquivo >> carros[tamanho].quilometragem;
+        cout << "Li a quilometragem" << endl;
         arquivo.ignore();
         arquivo.getline(carros[tamanho].categoria, 16, ',');
+        cout << "Li a categoria" << endl;
         arquivo >> lixo;
         arquivo.getline(carros[tamanho].descricao, 166, '"');
+        cout << "Li a descrição" << endl;
         arquivo >> lixo;
         arquivo >> carros[tamanho].preco;
+        cout << "Li o preço" << endl;
         arquivo.ignore();
         arquivo >> carros[tamanho].disponibilidade;
+        cout << "Li a disponibilidade" << endl;
         arquivo.ignore();
         arquivo.getline(carros[tamanho].locador, 21, '\n');
+        cout << "Li o locador" << endl;
+        cout << "Li o carro número " << tamanho;
         tamanho++;
-
+        
     }
 
     int colBarra = 1;
