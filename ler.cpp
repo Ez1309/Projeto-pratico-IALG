@@ -10,23 +10,23 @@
 using namespace std;
 
 struct veiculo{
-    string placa;
-    string fabricante;
-    string modelo;
-    string cor;
+    char *placa = new char[8];
+    char *fabricante = new char[14];
+    char *modelo = new char[9];
+    char *cor = new char[9];
     int ano;
     int quilometragem;
-    string categoria;
-    string descricao;
+    char *categoria = new char[16];
+    char *descricao = new char [166];
     double preco;
     char disponibilidade;
-    string locador;
+    char *locador = new char[21];
 };
 
 int main(){
 
     menu();
-    ifstream arquivo("carros.csv");
+    ifstream arquivo("carrosGrande.csv");
     string linha;
     getline(arquivo, linha);
 
@@ -34,23 +34,23 @@ int main(){
 
     for(int i=0; i<151; i++){
         char lixo;
-        getline(arquivo, carros[i].placa, ',');
-        getline(arquivo, carros[i].fabricante, ',');
-        getline(arquivo, carros[i].modelo, ',');
-        getline(arquivo, carros[i].cor, ',');
+        arquivo.getline(carros[i].placa, 8, ',');
+        arquivo.getline(carros[i].fabricante, 14, ',');
+        arquivo.getline(carros[i].modelo, 9, ',');
+        arquivo.getline(carros[i].cor, 9, ',');
         arquivo >> carros[i].ano;
         arquivo.ignore();
         arquivo >> carros[i].quilometragem;
         arquivo.ignore();
-        getline(arquivo, carros[i].categoria, ',');
+        arquivo.getline(carros[i].categoria, 16, ',');
         arquivo >> lixo;
-        getline(arquivo, carros[i].descricao, '"');
+        arquivo.getline(carros[i].descricao, 166, '"');
         arquivo >> lixo;
         arquivo >> carros[i].preco;
         arquivo.ignore();
         arquivo >> carros[i].disponibilidade;
         arquivo.ignore();
-        getline(arquivo, carros[i].locador, '\n');
+        arquivo.getline(carros[i].locador, 21, '\n');
 
     }
 
