@@ -30,7 +30,7 @@ void menu() {
 
         cout << "Largura terminal: " << largura << endl;
 
-        ifstream titulo("teste.txt");
+        ifstream titulo("menuInicial.txt");
         string linhaTitulo;
 
         while (getline(titulo, linhaTitulo)) {
