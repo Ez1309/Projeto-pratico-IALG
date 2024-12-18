@@ -19,7 +19,7 @@ struct veiculo{
     char *categoria = new char[16];
     char *descricao = new char [166];
     double preco;
-    char disponibilidade;
+    char *disponibilidade = new char[12];
     char *locador = new char[21];
 };
 
@@ -30,28 +30,36 @@ int main(){
     string linha;
     getline(arquivo, linha);
 
-    veiculo carros[151];
+    int tamanho = 0;
+    veiculo *carros;
+    carros = new veiculo[40];
 
-    for(int i=0; i<151; i++){
+    while(tamanho < 151){
+        cout << linha << endl << endl;
+        if (tamanho >= 40){
+            veiculo *temp = new veiculo [tamanho + 1];
+            copy(carros, carros+tamanho, temp);
+            delete [] carros;
+            carros = temp;
+        }
         char lixo;
-        arquivo.getline(carros[i].placa, 8, ',');
-        arquivo.getline(carros[i].fabricante, 14, ',');
-        arquivo.getline(carros[i].modelo, 9, ',');
-        arquivo.getline(carros[i].cor, 9, ',');
-        arquivo >> carros[i].ano;
+        arquivo.getline(carros[tamanho].placa, 8, ',');
+        arquivo.getline(carros[tamanho].fabricante, 14, ',');
+        arquivo.getline(carros[tamanho].modelo, 9, ',');
+        arquivo.getline(carros[tamanho].cor, 9, ',');
+        arquivo >> carros[tamanho].ano;
         arquivo.ignore();
-        arquivo >> carros[i].quilometragem;
+        arquivo >> carros[tamanho].quilometragem;
         arquivo.ignore();
-        arquivo.getline(carros[i].categoria, 16, ',');
+        arquivo.getline(carros[tamanho].categoria, 16, ',');
         arquivo >> lixo;
-        arquivo.getline(carros[i].descricao, 166, '"');
+        arquivo.getline(carros[tamanho].descricao, 166, '"');
         arquivo >> lixo;
-        arquivo >> carros[i].preco;
-        arquivo.ignore();
-        arquivo >> carros[i].disponibilidade;
-        arquivo.ignore();
-        arquivo.getline(carros[i].locador, 21, '\n');
-
+        arquivo >> carros[tamanho].preco;
+        arquivo >> lixo;
+        arquivo.getline(carros[tamanho].disponibilidade, 12, ',');
+        arquivo.getline(carros[tamanho].locador, 21, '\n');
+        tamanho++;
     }
 
     int colBarra = 1;
@@ -104,7 +112,7 @@ int main(){
     cout << "├─────────┼───────────────┼────────────┼──────────┼──────┼───────────────┼────────────────┼──────────────┼─────────────────┼────────────────────┤" << endl;
 
     // Exibir os dados das 20 linhas
-    for (int i = 0; i < 150; i++) {
+    for (int i = 0; i < tamanho-1; i++) {
         cout << "│"
              << setw(colPlaca) << left << carros[i].placa
              << setw(colBarra) << "│"
@@ -122,23 +130,20 @@ int main(){
              << setw(colBarra) << "│"
              << setw(colBarra) << "R$ "
              << setw(colPreco-3) << left << fixed << setprecision(2) << carros[i].preco
-             << setw(colBarra) << "│";
-             if (carros[i].disponibilidade == 'A')
-        cout << setw(colDisponibilidade) << left << "Alugado";
-             else
-        cout << setw(colDisponibilidade) << left << "Disponivel";
-        cout << setw(colBarra) << "│"
+             << setw(colBarra) << "│"
+             << setw(colDisponibilidade) << left << carros[i].disponibilidade
+             << setw(colBarra) << "│"
              << setw(colLocador) << left << carros[i].locador
              << "│" << endl;
 
         // Exibir a linha de separação após cada linha
-        if (i == 149)
+        if (i == tamanho-2)
             cout << "╰─────────┴───────────────┴────────────┴──────────┴──────┴───────────────┴────────────────┴──────────────┴─────────────────┴────────────────────╯" << endl;
         else
             cout << "├─────────┼───────────────┼────────────┼──────────┼──────┼───────────────┼────────────────┼──────────────┼─────────────────┼────────────────────┤" << endl;
   
     }
-    for (int i=0; i<150; i++){
+    for (int i=0; i<tamanho-1; i++){
         cout << "Carro " << i+1 << ": ";
         cout << carros[i].descricao << endl;
     }

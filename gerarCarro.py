@@ -182,8 +182,8 @@ def gerar_carro():
     ano = random.randint(intervaloAnos[0], intervaloAnos[1])
     quilometragem = gerarKm(ano)
     preco = gerar_preco(categoria, ano, quilometragem)
-    disponibilidade = random.choice(["A", "D"])
-    if disponibilidade == "D":
+    disponibilidade = random.choice(["Alugado", "Disponível"])
+    if disponibilidade == "Disponível":
         locador = "Disponivel"
     else:
         locador = gerar_nome_completo()
