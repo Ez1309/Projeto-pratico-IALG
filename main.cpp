@@ -12,10 +12,10 @@ int main() {
         telaFinal();
         return 0;
     }
+
     veiculo *carros = new veiculo [40];
     int linhas = 0;
     
-
     bool leu = lerDados(carros, linhas);
     if (leu)
         imprimirTabela(carros, linhas);

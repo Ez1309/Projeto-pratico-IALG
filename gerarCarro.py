@@ -216,4 +216,4 @@ def salvar_csv(nome_arquivo, quantidade):
             writer.writerow(carro)
 
 # Gerar e salvar 30 carros no arquivo "carrosGrande.csv"
-salvar_csv("carros.csv", 150)
+salvar_csv("carros.csv", 100)
