@@ -1,13 +1,17 @@
 #include <iostream>
 
-#include "menu.cpp"
+#include "telas.cpp"
 #include "ler.cpp"
 
 using namespace std;
 
 int main() {
     
-    menu();
+    string opcaoPrincipal = telaPrincipal();
+    if (opcaoPrincipal == "3"){
+        telaFinal();
+        return 0;
+    }
     veiculo *carros = new veiculo [40];
     int linhas = 0;
     
