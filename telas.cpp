@@ -14,10 +14,11 @@
 using namespace std;
 
 void limpar();
-void menu();    
+string telaPrincipal();
+void telaFinal();   
 int larguraTerminal();
 
-void menu() {
+string telaPrincipal() {
     string opcao;
     bool opcaoInvalida = false;
 
@@ -30,7 +31,7 @@ void menu() {
 
         cout << "Largura terminal: " << largura << endl;
 
-        ifstream titulo("menuInicial.txt");
+        ifstream titulo("telas/telaPrincipal.txt");
         string linhaTitulo;
 
         while (getline(titulo, linhaTitulo)) {
@@ -44,9 +45,20 @@ void menu() {
         cout << setw(opcaoPadding) << " " << "Escolha uma opção: ";
         getline(cin, opcao);
 
-        opcaoInvalida = (opcao != "1" && opcao != "2");
-
+        opcaoInvalida = (opcao != "1" && opcao != "2" && opcao != "3");
+        limpar();
     } while (opcaoInvalida);
+    
+    return opcao;
+}
+
+void telaFinal(){
+    limpar();
+    ifstream tela("telas/telaFinal.txt");
+    string linha;
+    while (getline(tela, linha)){
+        cout << linha << endl;
+    }
 }
 
 void limpar() {

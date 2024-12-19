@@ -9,5 +9,6 @@
 ║                                   ║
 ║   (1) Entrar como administrador   ║
 ║   (2) Entrar como cliente         ║
+║   (3) Encerrar aplicação          ║
 ║                                   ║
 ╚═══════════════════════════════════╝
