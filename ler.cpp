@@ -4,6 +4,7 @@
 #include <sstream>
 #include <string>
 #include <cstring>
+#include <typeinfo>
 
 using namespace std;
 
@@ -16,7 +17,7 @@ const int tamanhoDescricao = 166;
 const int tamanhoDisponibilidade = 12;
 const int tamanhoLocador = 21;
 
-struct veiculo{
+/*struct veiculo{
     char *placa = new char[tamanhoPlaca];
     char *fabricante = new char[tamanhoFabricante];
     char *modelo = new char[tamanhoModelo];
@@ -28,128 +29,154 @@ struct veiculo{
     double preco;
     char *disponibilidade = new char[tamanhoDisponibilidade];
     char *locador = new char[tamanhoLocador];
+};*/
+
+struct veiculo {
+    char placa[tamanhoPlaca];
+    char fabricante[tamanhoFabricante];
+    char modelo[tamanhoModelo];
+    char cor[tamanhoCor];
+    int ano;
+    int quilometragem;
+    char categoria[tamanhoCategoria];
+    char descricao[tamanhoDescricao];
+    double preco;
+    char disponibilidade[tamanhoDisponibilidade];
+    char locador[tamanhoLocador];
 };
 
-
+bool csvParaBinario();
 bool lerDados(veiculo* &carros, int &linhas);
 void imprimirTabela(veiculo carros[], int &linhas);
 
-bool lerDados(veiculo* &carros, int &linhas){
+bool csvParaBinario(){
 
+    // Abertura do arquivo CSV com checagem de erro
     bool leuComSucesso = true;
-    int tamanho = 0;
-    char caractere;
-    linhas = 0;
-
     ifstream arquivoCSV("carros.csv");
     if (!arquivoCSV){
         cout << "Não foi possível abrir o arquivo carros.csv!" << endl;
         return (not leuComSucesso);
     }
 
-    ofstream binarioSaida("carros.dat");
-
-    // Ignorando o cabeçalho
-    arquivoCSV.ignore(109);
-
-    while(arquivoCSV.get(caractere)){
-        cout << caractere;
-        binarioSaida.write((const char *) &caractere, sizeof(char));
-        tamanho++;
+    // Criação ou atualização do arquivo binário
+    ofstream arquivoBinario("carros.dat", ios::binary);
+    if (!arquivoBinario){
+        cout << "Não foi possível criar o arquivo carros.dat!" << endl;
+        return (not leuComSucesso);
     }
-    cout << tamanho << endl;
 
-    binarioSaida.seekp(0, binarioSaida.beg);
-    binarioSaida.write((const char *) &tamanho, sizeof(int));
-
-    arquivoCSV.close();
-    binarioSaida.close();
-
-    int tamanho2 = 0;
-    ifstream binarioEntrada("carros.dat");
-    binarioEntrada.read((char *)(&tamanho2), sizeof(int));
-
-    cout << tamanho2 << endl;
-
-
-
-
-  
-
-
-
-   
-
-    /*string linha;
+    // Ignora o cabeçalho do arquivo CSV
+    string linha;
     getline(arquivoCSV, linha);
+    cout << linha << endl;
 
+    // Contador para o número de carros
+    int linhas = 0;
 
+    // Reservando o início do arquivo binário para receber a quantidade de carros
+    arquivoBinario.write((const char *)(&linhas), sizeof(int));
 
-
-
-    
-    // Ler os dados até chegar ao fim do arquivo
-    while(!arquivoCSV.eof()){
-
-        // Condicional para redimensionar o vetor caso ele tenha mais de 40 elementos
-        if (linhas == tamanho){
-            int novoTamanho = tamanho + 10;
-            veiculo *temp = new veiculo [novoTamanho];
-            copy(carros, carros+tamanho, temp);
-            delete [] carros;
-            carros = temp;
-            tamanho = novoTamanho;
-        }
-
+    while(getline(arquivoCSV, linha)){
+        cout << linha << endl;
+        veiculo carro;
+        int tamanhoCarro = 0;
         // Leitura da placa, fabricante, modelo e cor
-        arquivoCSV.getline(carros[linhas].placa, tamanhoPlaca, ',');
-        arquivoCSV.getline(carros[linhas].fabricante, tamanhoFabricante, ',');
-        arquivoCSV.getline(carros[linhas].modelo, tamanhoModelo, ',');
-        arquivoCSV.getline(carros[linhas].cor, tamanhoCor, ',');
+        arquivoCSV.getline(carro.placa, tamanhoPlaca, ',');
+        cout << carro.placa << endl;
+        arquivoCSV.getline(carro.fabricante, tamanhoFabricante, ',');
+        cout << carro.fabricante << endl;
+        arquivoCSV.getline(carro.modelo, tamanhoModelo, ',');
+        cout << carro.modelo << endl;
+        arquivoCSV.getline(carro.cor, tamanhoCor, ',');
+        cout << carro.cor << endl;
 
         // Leitura do ano ignorando a vírgula
-        arquivoCSV >> carros[linhas].ano;
+        arquivoCSV >> carro.ano;
+        cout << carro.ano << endl;
         arquivoCSV.ignore();
 
         // Leitura da quilometragem ignorando a vírgula
-        arquivoCSV >> carros[linhas].quilometragem;
+        arquivoCSV >> carro.quilometragem;
+        cout << carro.quilometragem << endl;
         arquivoCSV.ignore();
 
         // Leitura da categoria
-        arquivoCSV.getline(carros[linhas].categoria, tamanhoCategoria, ',');
+        arquivoCSV.getline(carro.categoria, tamanhoCategoria, ',');
+        cout << carro.categoria << endl;
 
         // Leitura da descrição ignorando as primeiras aspas " e a vírgula
         arquivoCSV.ignore();
-        arquivoCSV.getline(carros[linhas].descricao, tamanhoDescricao, '"');
+        arquivoCSV.getline(carro.descricao, tamanhoDescricao, '"');
+        cout << carro.descricao << endl;
         arquivoCSV.ignore();
 
         // Leitura do preço ignorando a vírgula
-        arquivoCSV >> carros[linhas].preco;
+        arquivoCSV >> carro.preco;
+        cout << carro.preco << endl;
         arquivoCSV.ignore();
 
         // Leitura da disponibilidade e do locador
-        arquivoCSV.getline(carros[linhas].disponibilidade, tamanhoDisponibilidade, ',');
-        arquivoCSV.getline(carros[linhas].locador, tamanhoLocador, '\n');
+        arquivoCSV.getline(carro.disponibilidade, tamanhoDisponibilidade, ',');
+        cout << carro.disponibilidade << endl;
+        arquivoCSV.getline(carro.locador, tamanhoLocador, '\n');
+        cout << carro.locador << endl << endl;
+
+        // Escrita do carro no arquivo binário
+        arquivoBinario.write((const char *)(&carro), sizeof(veiculo));
         linhas++;
-    }*/
-    
-    //if (not binarioEntrada){
-    //    cout << "Não foi possível escrever no arquivo carros.dat" << endl;
-    //    return (not leuComSucesso);
-    //}
+    }
 
-    // Ler dados do arquivo binário de entrada
-    // A FAZER
+    cout << linhas << endl;
 
-    // Escrita dos dados no arquivo binário de saída
-     //ofstream binarioSaida("carros.dat");
-     //binarioSaida.write((const char *) (carros), sizeof(carros));
+    // Voltando ao início do arquivo binário para armazenar a quantidade de carros
+    arquivoBinario.seekp(0, arquivoBinario.beg);
+    arquivoBinario.write((const char *)(&linhas), sizeof(int));
 
-    // Fechamento dos arquivos
-     //binarioSaida.close();
-    // binarioEntrada.close();
-     //arquivoCSV.close();
-     return leuComSucesso;
+    // Fechando os arquivos utilizados
+    arquivoBinario.close();
+    arquivoCSV.close();
+
+    return leuComSucesso;
+}
+
+bool lerDados(veiculo* &carros, int &linhas){
+
+    bool leuComSucesso = true;
+
+    // Abertura do arquivo binário contendo os carros
+    ifstream arquivoBinario("carros.dat");
+    if(!arquivoBinario){
+        cout << "Não foi possível abrir o arquivo carros.dat!" << endl;
+        return (not leuComSucesso);
+    }
+
+    // Leitura da quantidade de carros existentes
+    arquivoBinario.read((char *)(&linhas), sizeof(int));
+
+    int tamanhoVetor = 0;
+    int qtdCarros = 0;
+
+    for (int i=0; i<linhas; i++){
+        // Redimensionando o vetor de carros
+        if (qtdCarros == tamanhoVetor){
+            int novoTamanho = tamanhoVetor + 10;
+            veiculo *temp = new veiculo[novoTamanho];
+            copy(carros, carros+tamanhoVetor, temp);
+            delete[] carros;
+            carros = temp;
+        }
+
+        // Leitura do carro
+        arquivoBinario.read((char *)(&carros[i]), sizeof(veiculo));
+        qtdCarros++;
+        tamanhoVetor++;
+    }
+
+    // Fechando o arquivo binário
+    arquivoBinario.close();
+
+    return leuComSucesso;
 }
 
 void imprimirTabela(veiculo carros[], int &tamanho){

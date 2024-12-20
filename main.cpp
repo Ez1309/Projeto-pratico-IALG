@@ -6,13 +6,14 @@
 using namespace std;
 
 int main() {
-    
+
     string opcaoPrincipal = telaPrincipal();
     if (opcaoPrincipal == "3"){
         telaFinal();
         return 0;
     }
 
+    csvParaBinario();
     veiculo *carros = new veiculo [40];
     int linhas = 0;
     
