@@ -1,61 +1,98 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
+#include <sstream>
+#include <string>
 
 using namespace std;
 
-int main() {
-	ifstream arquivoTexto("entrada.txt");
-	
-	int capacidade = 5;
-    int* vetor = new int[capacidade];
-    int cont = 0;
-    int valor;
+const int tamanhoPlaca = 8;
+const int tamanhoFabricante = 14;
+const int tamanhoModelo = 9;
+const int tamanhoCor = 9;
+const int tamanhoCategoria = 16;
+const int tamanhoDescricao = 166;
+const int tamanhoDisponibilidade = 12;
+const int tamanhoLocador = 21;
+
+struct veiculo{
+    char *placa = new char[tamanhoPlaca];
+    char *fabricante = new char[tamanhoFabricante];
+    char *modelo = new char[tamanhoModelo];
+    char *cor = new char[tamanhoCor];
+    int ano;
+    int quilometragem;
+    char *categoria = new char[tamanhoCategoria];
+    char *descricao = new char [tamanhoDescricao];
+    double preco;
+    char *disponibilidade = new char[tamanhoDisponibilidade];
+    char *locador = new char[tamanhoLocador];
+};
+
+bool lerDados(veiculo* &carros, int &linhas);
+void imprimirTabela(veiculo carros[], int &linhas);
+
+bool lerDados(veiculo* &carros, int &linhas){
+
+    bool leuComSucesso = true;
+    ifstream arquivo("carros.csv");
+
+    if (!arquivo){
+        cout << "Não foi possível abrir o arquivo carros.csv!" << endl;
+        return (not leuComSucesso);
+    }
+
+    string linha;
+    getline(arquivo, linha);
+
+    int tamanho = 0;
+    linhas = 0;
+
     
-    while (arquivoTexto >> valor) {
-        if (cont == capacidade) {
-            int novaCapacidade = capacidade + 5;
-            int* temp = new int[novaCapacidade];
-            for (int i = 0; i < capacidade; i++) {
-                temp[i] = vetor[i];
-            }
-            delete[] vetor;
-            vetor = temp;
-            capacidade = novaCapacidade;
+    // Ler os dados até chegar ao fim do arquivo
+    while(!arquivo.eof()){
+
+        // Condicional para redimensionar o vetor caso ele tenha mais de 40 elementos
+        if (linhas == tamanho){
+            int novoTamanho = tamanho + 10;
+            veiculo *temp = new veiculo [novoTamanho];
+            copy(carros, carros+tamanho, temp);
+            delete [] carros;
+            carros = temp;
+            tamanho = novoTamanho;
         }
-        vetor[cont++] = valor;
+
+        // Leitura da placa, fabricante, modelo e cor
+        arquivo.getline(carros[linhas].placa, tamanhoPlaca, ',');
+        arquivo.getline(carros[linhas].fabricante, tamanhoFabricante, ',');
+        arquivo.getline(carros[linhas].modelo, tamanhoModelo, ',');
+        arquivo.getline(carros[linhas].cor, tamanhoCor, ',');
+
+        // Leitura do ano ignorando a vírgula
+        arquivo >> carros[linhas].ano;
+        arquivo.ignore();
+
+        // Leitura da quilometragem ignorando a vírgula
+        arquivo >> carros[linhas].quilometragem;
+        arquivo.ignore();
+
+        // Leitura da categoria
+        arquivo.getline(carros[linhas].categoria, tamanhoCategoria, ',');
+
+        // Leitura da descrição ignorando as primeiras aspas " e a vírgula
+        arquivo.ignore();
+        arquivo.getline(carros[linhas].descricao, tamanhoDescricao, '"');
+        arquivo.ignore();
+
+        // Leitura do preço ignorando a vírgula
+        arquivo >> carros[linhas].preco;
+        arquivo.ignore();
+
+        // Leitura da disponibilidade e do locador
+        arquivo.getline(carros[linhas].disponibilidade, tamanhoDisponibilidade, ',');
+        arquivo.getline(carros[linhas].locador, tamanhoLocador, '\n');
+        linhas++;
     }
-    
-    arquivoTexto.close();
-    
-    cout << "Dados lidos do arquivo de texto:" << endl;
-    for (int i = 0; i < cont; i++) {
-        cout << vetor[i] << " ";
-    }
-    cout << endl;
-    
-    ofstream arquivoBinarioSaida("dados.dat");
-    
-    arquivoBinarioSaida.write(reinterpret_cast<char*>(&cont), sizeof(int)); // Tamanho
-    arquivoBinarioSaida.write(reinterpret_cast<char*>(vetor), cont * sizeof(int)); // Valores
-    arquivoBinarioSaida.close();
-    
-    delete[] vetor;
-    
-    ifstream arquivoBinarioEntrada("dados.dat");
-    
-    int tamanho;
-    arquivoBinarioEntrada.read(reinterpret_cast<char*>(&tamanho), sizeof(int)); // Tamanho
-    int* vetorLido = new int[tamanho];
-    arquivoBinarioEntrada.read(reinterpret_cast<char*>(vetorLido), tamanho * sizeof(int)); // Lê os valores
-    arquivoBinarioEntrada.close();
-    
-    cout << "Dados lidos do arquivo binário:" << endl;
-    for (int i = 0; i < tamanho; i++) {
-        cout << vetorLido[i] << " ";
-    }
-    cout << endl;
-    
-    delete[] vetorLido;
-    
-	return 0;
+     arquivo.close();
+     return leuComSucesso;
 }
