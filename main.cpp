@@ -1,4 +1,10 @@
 #include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <sstream>
+#include <string>
+#include <cstring>
+#include <typeinfo>
 
 #include "telas.cpp"
 #include "ler.cpp"
@@ -17,6 +23,7 @@ int main() {
     int linhas = 0;
     bool leu = false;
     leu = csvParaBinario(linhas);
+
     if (leu){
         veiculo *carros = new veiculo[40];
         leu = lerDados(carros, linhas);

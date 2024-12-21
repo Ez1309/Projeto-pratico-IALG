@@ -153,6 +153,19 @@ def gerar_carro():
         "SUV Medio": "carro espaçoso sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre com mais recursos e conforto.",
     }
 
+    # categorias_descricao = {
+    #     "Hatch Compacto": "carro compacto, pratico e economico. Ideal para o uso no dia a dia urbano, com baixo consumo de combustivel.",
+    #     "Hatch Medio": "carro espaçoso, confortavel e economico. Ideal para viagens curtas e uso em familia, com bons recursos e conforto",
+    #     "Hatch Premium": "carro luxuoso, altamente confortavel e tecnológico. Ideal para quem busca mais conforto, desempenho e design refinado.",
+    #     "Seda Compacto": "carro popular, espaçoso, com boa estabilidade de direçao. Ideal para conforto e desempenho urbano.",
+    #     "Seda Medio": "carro confortavel, espaçoso, com bom acabamento e motor potente. Ideal para viagens longas e uso na cidade, combinando desempenho e conforto.",
+    #     "Seda Premium": "carro espaçoso, extremamente confortavel, com acabamento e tecnologias premium. Ideal para quem busca um carro de alto padrão, com design e desempenho excepcionais.",
+    #     "Picape Compacta": "carro versatil com caçamba e cabine de passageiros. Ideal para transporte de pequenas cargas e tarefas cotidianas, com agilidade para o uso urbano.",
+    #     "Picape Media": "carro com motor resistente, caçamba grande e cabine de passageiros. Ideal para terrenos rurais e acidentados, com mais capacidade de carga e robustez.",
+    #     "SUV Compacto": "carro espaçoso, versatil e com bom desempenho. Ideal para quem busca um carro mais robusto, adequado para o dia a dia e leves aventuras.",
+    #     "SUV Medio": "carro espaçoso, sofisticado e com motor potente. Ideal para viagens longas em familia e atividades ao ar livre, com mais recursos e conforto.",
+    # }
+
     anos_fabricacao = {
     "Gol": (1980, 2022), "Fox": (2003, 2021), "Polo": (2002, 2024), "Voyage": (1981, 2023), "Saveiro": (1982, 2024), "Jetta": (2006, 2024), "Amarok": (2010, 2024),
     "Onix": (2012, 2024), "Prisma": (2006, 2019), "S10": (1995, 2024), "Corsa": (1994, 2012), "Celta": (2000, 2015), "Classic": (1995, 2016),
@@ -222,4 +235,4 @@ def salvar_csv(nome_arquivo, quantidade):
             writer.writerow(carro)
 
 # Gerar e salvar 30 carros no arquivo "carrosGrande.csv"
-salvar_csv("carros.csv", 10)
+salvar_csv("carros.csv", 101)

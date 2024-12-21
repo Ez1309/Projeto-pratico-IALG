@@ -58,16 +58,12 @@ bool csvParaBinario(int &linhas){
     getline(arquivoCSV, linha);
     
 
-    // Reservando espaço no início do arquivo binário para armazenar a quantidade de linhas
     linhas = 0;
-    arquivoBinario.write((const char*)(&linhas), sizeof(int));
-    cout << "Linhas antes da escrita: " << linhas << endl << endl;
-
     cout << "Linha " << linhas+1 << ": "<< linha << endl << endl;
     // Loop para preencher o arquivo binário com os carros
     while(!arquivoCSV.eof()){
         cout << "Linha " << linhas+2 << ": ";
-        veiculo carro; // Variável temporária
+        veiculo carro = {}; // Variável temporária
 
         // Leitura da placa, fabricante, modelo e cor
         arquivoCSV.getline(carro.placa, tamanhoPlaca, ',');
@@ -119,9 +115,6 @@ bool csvParaBinario(int &linhas){
 
     cout << endl << "Quantidade de linhas lidas: " << linhas << endl << endl;
 
-    // Escrita total de carros lidos no inicio do arquivo binário
-    arquivoBinario.seekp(0, arquivoBinario.beg);
-    arquivoBinario.write((const char*)(&linhas), sizeof(int));
     cout << "Linhas depois da escrita: " << linhas << endl;
 
     // Fechando os arquivos abertos
@@ -141,9 +134,6 @@ bool lerDados(veiculo* &carros, int &linhas){
         cout << "Não foi possível abrir o arquivo carros.dat!" << endl;
         return (not leuComSucesso);
     }
-
-    // Leitura da quantidade de carros existentes
-    arquivoBinario.read((char *)(&linhas), sizeof(int));
 
     int tamanhoVetor = 40;
     int qtdCarros = 0;
