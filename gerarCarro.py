@@ -14,6 +14,9 @@ primeiros_nomes = ['Joao', 'Maria', 'Carlos', 'Ana', 'Jose', 'Fernanda', 'Rafael
 sobrenomes = ['Silva', 'Souza', 'Oliveira', 'Costa', 'Pereira', 'Lima', 'Rodrigues', 'Martins', 
               'Santos', 'Almeida', 'Mendes', 'Gomes', 'Ferreira', 'Ribeiro', 'Cardoso']
 
+
+
+
 # Funçao para gerar um nome completo aleatorio
 def gerar_nome_completo():
     primeiro_nome = random.choice(primeiros_nomes)
@@ -122,6 +125,7 @@ def gerar_carro():
         "Mercedes-Benz":["C180", "A200"],
         "Audi":["A3", "A4", "Q3"],
     }
+
     categorias_modelos = {
         "Hatch Compacto":["Mobi", "Argo", "Fit", "Ka", "Etios", "Yaris", "208", "March", "HB20", "Kwid"],
         "Hatch Medio": ["Gol", "Fox", "Polo", "Onix", "Corsa", "Celta", "Classic", "Palio", "Uno", "Fiesta"],
@@ -134,6 +138,8 @@ def gerar_carro():
         "SUV Compacto": ["Pulse", "HR-V", "CR-V", "EcoSport", "2008", "Kicks", "Creta", "Duster", "Renegade", "Q3"],
         "SUV Medio": ["Tucson", "Compass", "X1", "X3"],
     }
+
+    
     categorias_descricao = {
         "Hatch Compacto": "carro compacto pratico e economico. Ideal para o uso no dia a dia urbano com baixo consumo de combustivel.",
         "Hatch Medio": "carro espaçoso confortavel e economico. Ideal para viagens curtas e uso em familia com bons recursos e conforto",
@@ -216,4 +222,4 @@ def salvar_csv(nome_arquivo, quantidade):
             writer.writerow(carro)
 
 # Gerar e salvar 30 carros no arquivo "carrosGrande.csv"
-salvar_csv("carros.csv", 41)
+salvar_csv("carros.csv", 10)
