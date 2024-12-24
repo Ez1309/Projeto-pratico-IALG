@@ -5,6 +5,7 @@
 #include <string>
 #include <cstring>
 #include <typeinfo>
+#include <locale>
 
 #include "leitura.cpp"
 
@@ -16,7 +17,7 @@ void imprimirCabecalho(const int tamanhos[], const string colunas[], int qtdColu
 void imprimirLinha(veiculo carros[], int linha, string modo);
 
 void imprimirTabela(veiculo carros[], int linhas, string modo) {
-    
+  
     // Ponteiros que irão apontar para os vetores referentes as colunas da tabela
     const int* tamanhos; 
     const string* colunas;
@@ -36,8 +37,8 @@ void imprimirTabela(veiculo carros[], int linhas, string modo) {
         // Descrição de cada coluna da tabela
         const string colunasAdm[] = {
             " PLACA", " FABRICANTE", " MODELO", " COR", " ANO",
-            " QUILOMETRAGEM", " CATEGORIA", " PREÇO DIÁRIO ",
-            " DISPONIBILIDADE ", " LOCADOR "
+            " QUILOMETRAGEM", " CATEGORIA", "PRECO DIARIO ",
+            "DISPONIBILIDADE", " LOCADOR "
         };
 
         tamanhos = tamanhosAdm;
@@ -57,7 +58,7 @@ void imprimirTabela(veiculo carros[], int linhas, string modo) {
         // Descrição de cada coluna da tabela
         const string colunasCliente[] = {
             "ID", " FABRICANTE", " MODELO", " COR", " ANO",
-            " QUILOMETRAGEM", " CATEGORIA", " PREÇO DIÁRIO "
+            " QUILOMETRAGEM", " CATEGORIA", " PRECO DIARIO "
         };
 
         tamanhos = tamanhosCliente;
@@ -135,10 +136,4 @@ void imprimirLinha(veiculo carros[], int linha, string modo){
              << setw(tamanhoLocador)         << left << carros[linha].locador;
     }
     cout << "│" << endl;
-
-  
-                
-            
-    
 }
-
