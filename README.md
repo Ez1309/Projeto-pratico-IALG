@@ -28,4 +28,14 @@ git pull (nome do remote) (nome da branch): pega as alterações do repositório
 
 git fetch: atualiza o histórico local de acordo com o histórico salvo no repositório remoto
 
+git merge -s ours (nome da branch): O comando acima informa ao Git que, em caso de conflito, a versão da branch atual (master) deve ser mantida. Isso apenas ajusta o histórico de commits, mas não altera os arquivos ainda.
+
+git checkout (nome da branch) -- . :Copia todo o conteúdo de (nome da branch) para a branch atual
+
+git branch -d (nome da branch): Deleta a branch (nome da branch) se ela foi mesclada
+git branch -D (nome da branch): Deleta a branch (nome da branch) se ela não foi mesclada
+git push origin --delete (nome da branch) : Deleta a branch no repositório remoto
+
+
+
 comentário
