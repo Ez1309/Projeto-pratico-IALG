@@ -1,0 +1,25 @@
+main.cpp:
+
+- iostream
+
+impressao.cpp:
+
+- iostream
+- iomanip (setw, setprecision)
+
+dados.cpp:
+
+- iostream
+- string (getline)
+- fstream (ifstream, ofstream)
+- algorithm (copy)
+
+telas.cpp:
+
+- iostream
+- iomanip (setw)
+- string (getline)
+- windows.h (SetConsoleOutputCP, CONSOLE_SCREEN_BUFFER_INFO, GetConsoleScreenBufferInfo)
+- <sys/ioctl.h>
+- <unistd.h>
+
