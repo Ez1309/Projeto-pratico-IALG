@@ -1,24 +1,12 @@
+#include "cabecalhos/impressao.h"
+
 #include <iostream>
-#include <fstream>
-#include <iomanip>
-#include <sstream>
-#include <string>
-#include <cstring>
-#include <typeinfo>
-#include <locale>
-
-#include "leitura.cpp"
-
 using namespace std;
 
-void imprimirTabela(veiculo carros[], int linhas, string modo);
-void imprimirSeparacao(const char* delimEsq, const char* delim, const char* delimDir, const int tamanhos[], int qtdColunas);
-void imprimirCabecalho(const int tamanhos[], const string colunas[], int qtdColunas);
-void imprimirLinha(veiculo carros[], int linha, string modo);
-
-void imprimirTabela(veiculo carros[], int linhas, string modo) {
-  
+void imprimirTabela(veiculo carros[], int linhas, string modo, int inicio, int final) {
+    
     // Ponteiros que irão apontar para os vetores referentes as colunas da tabela
+    cout << linhas << endl;
     const int* tamanhos; 
     const string* colunas;
 
@@ -37,8 +25,8 @@ void imprimirTabela(veiculo carros[], int linhas, string modo) {
         // Descrição de cada coluna da tabela
         const string colunasAdm[] = {
             " PLACA", " FABRICANTE", " MODELO", " COR", " ANO",
-            " QUILOMETRAGEM", " CATEGORIA", "PRECO DIARIO ",
-            "DISPONIBILIDADE", " LOCADOR "
+            " QUILOMETRAGEM", " CATEGORIA", " PREÇO DIÁRIO ",
+            " DISPONIBILIDADE ", " LOCADOR "
         };
 
         tamanhos = tamanhosAdm;
@@ -58,7 +46,7 @@ void imprimirTabela(veiculo carros[], int linhas, string modo) {
         // Descrição de cada coluna da tabela
         const string colunasCliente[] = {
             "ID", " FABRICANTE", " MODELO", " COR", " ANO",
-            " QUILOMETRAGEM", " CATEGORIA", " PRECO DIARIO "
+            " QUILOMETRAGEM", " CATEGORIA", " PREÇO DIÁRIO "
         };
 
         tamanhos = tamanhosCliente;
@@ -70,10 +58,11 @@ void imprimirTabela(veiculo carros[], int linhas, string modo) {
     imprimirCabecalho(tamanhos, colunas, qtdColunas);
 
     // Imprime as linhas e separadores
-    for (int linha = 0; linha < linhas; linha++) {
-        imprimirLinha(carros, linha, modo);
+    int index = 0;
+    for (int linha = inicio; linha < final; linha++) {
+        imprimirLinha(carros, linha, modo, ++index);
 
-        if (linha != linhas - 1) {
+        if (linha != final - 1) {
             imprimirSeparacao("├", "┼", "┤", tamanhos, qtdColunas);
         } else {
             imprimirSeparacao("╰", "┴", "╯", tamanhos, qtdColunas);
@@ -107,7 +96,7 @@ void imprimirCabecalho(const int tamanhos[], const string colunas[], int qtdColu
 }
 
 // Função para imprimir o conetúdo de uma linha da tabela
-void imprimirLinha(veiculo carros[], int linha, string modo){
+void imprimirLinha(veiculo carros[], int linha, string modo, int index){
 
     cout << "│";
 
@@ -115,7 +104,7 @@ void imprimirLinha(veiculo carros[], int linha, string modo){
     if (modo == "adm")
         cout << setw(tamanhoPlaca) << left << carros[linha].placa << "│";
     else if (modo == "cliente")
-        cout << setw(4) << left << linha+1 << "│";
+        cout << setw(4) << left << index << "│";
 
     // Colunas comuns entre os dois modos de exibição
     cout << setw(tamanhoFabricante)       << left << carros[linha].fabricante                       << "│"
@@ -136,4 +125,6 @@ void imprimirLinha(veiculo carros[], int linha, string modo){
              << setw(tamanhoLocador)         << left << carros[linha].locador;
     }
     cout << "│" << endl;
+   
 }
+
