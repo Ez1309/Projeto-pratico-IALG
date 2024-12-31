@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include <algorithm>
+#include <cstring>
 
 #include <iostream>
 using namespace std;
@@ -38,3 +39,4 @@ struct veiculo {
 bool csvParaBinario(int &linhas);
 bool lerDados(veiculo* &carros, int &linhas);
 bool atualizarDados(veiculo* &carros, int &linhas);
+bool removerCarro(veiculo* &carros, int &linhas, char placa[]);

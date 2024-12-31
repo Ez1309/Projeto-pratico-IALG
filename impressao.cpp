@@ -60,12 +60,14 @@ void imprimirTabela(veiculo carros[], int linhas, string modo, int inicio, int f
     // Imprime as linhas e separadores
     int index = 0;
     for (int linha = inicio; linha < final; linha++) {
-        imprimirLinha(carros, linha, modo, ++index);
 
-        if (linha != final - 1) {
-            imprimirSeparacao("├", "┼", "┤", tamanhos, qtdColunas);
-        } else {
-            imprimirSeparacao("╰", "┴", "╯", tamanhos, qtdColunas);
+        if (linha < linhas){
+            imprimirLinha(carros, linha, modo, ++index);
+
+            if (linha == final - 1 or linha == linhas - 1) 
+                imprimirSeparacao("╰", "┴", "╯", tamanhos, qtdColunas);
+            else
+                imprimirSeparacao("├", "┼", "┤", tamanhos, qtdColunas);
         }
     }
 }

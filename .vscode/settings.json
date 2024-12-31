@@ -45,5 +45,6 @@
         "typeinfo": "cpp",
         "cstring": "cpp",
         "typeindex": "cpp"
-    }
+    },
+    "peacock.remoteColor": "#8F4112"
 }

@@ -170,3 +170,45 @@ bool atualizarDados(veiculo* &carros, int &linhas) {
     return atualizouComSucesso;
 }
 
+bool removerCarro(veiculo* &carros, int &linhas, char placa[]){
+
+    bool removeuComSucesso = true;
+    int index = -1;
+
+     // Substituir esse for loop pela função de busca binária.
+    for (int i=0; i<linhas; i++){
+
+        // A busca binária vai retornar um índiceEncontrado então dá pra fazer
+        // if (strcmp(placa, carros[indiceEncontrado].placa) == 0) e
+        // if (strcmp(placa, carros[indiceEncontrado].disponibilidade) == 0)
+        // else index = indiceEncontrado
+
+        if (strcmp(placa, carros[i].placa) == 0){ // Encontrou a placa
+            if (strcmp("Alugado", carros[i].disponibilidade) == 0) index = -2; // Porém o carro está alugado
+            else index = i; // Encontrou a placa e o carro não está alugado
+        }
+    }
+
+    if (index >=0){
+    
+        int posicao = 0;
+        veiculo *temp = new veiculo[linhas-1];
+        for (int j=0; j<linhas; j++){
+            if (j != index) temp[posicao++] = carros[j];
+        }
+        delete [] carros;
+        carros = temp;
+        linhas--;
+        return removeuComSucesso;
+    }
+    else{
+        cout << "Não foi possível remover o carro com a placa '" << placa << "'" << endl;
+
+        if (index == -1) cout << "Motivo do erro: PLACA NÃO ENCONTRADA." << endl; 
+        else if (index == -2)  cout << "Motivo do erro: O CARRO ESTÁ ALUGADO." << endl;
+        else cout << "Motivo do erro: ERRO DESCONHECIDO" << endl;
+        
+        return (not removeuComSucesso);
+    }
+   
+}
