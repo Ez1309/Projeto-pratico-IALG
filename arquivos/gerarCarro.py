@@ -1,6 +1,7 @@
 import csv
 import random
 import string
+from sys import platform
 
 
 
@@ -233,6 +234,18 @@ def salvar_csv(nome_arquivo, quantidade):
         for _ in range(quantidade):
             carro = gerar_carro()
             writer.writerow(carro)
+    if (platform != "win32"):
+        # Após escrever, abrir o arquivo novamente e remover os \r
+        with open(nome_arquivo, 'r', encoding='utf-8') as file:
+            content = file.read()
+
+        # Substitui os \r por nada
+        content = content.replace('\r', '')
+
+        # Reabre o arquivo em modo de escrita para salvar a versão corrigida
+        with open(nome_arquivo, 'w', encoding='utf-8') as file:
+            file.write(content)
+
 
 # Gerar e salvar 30 carros no arquivo "carrosGrande.csv"
 salvar_csv("carros.csv", 101)

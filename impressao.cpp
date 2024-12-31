@@ -25,8 +25,8 @@ void imprimirTabela(veiculo carros[], int linhas, string modo, int inicio, int f
         // Descrição de cada coluna da tabela
         const string colunasAdm[] = {
             " PLACA", " FABRICANTE", " MODELO", " COR", " ANO",
-            " QUILOMETRAGEM", " CATEGORIA", " PREÇO DIÁRIO ",
-            " DISPONIBILIDADE ", " LOCADOR "
+            " QUILOMETRAGEM", " CATEGORIA", " PRECO DIARIO ",
+            "DISPONIBILIDADE", " LOCADOR "
         };
 
         tamanhos = tamanhosAdm;
@@ -46,7 +46,7 @@ void imprimirTabela(veiculo carros[], int linhas, string modo, int inicio, int f
         // Descrição de cada coluna da tabela
         const string colunasCliente[] = {
             "ID", " FABRICANTE", " MODELO", " COR", " ANO",
-            " QUILOMETRAGEM", " CATEGORIA", " PREÇO DIÁRIO "
+            " QUILOMETRAGEM", " CATEGORIA", " PRECO DIARIO "
         };
 
         tamanhos = tamanhosCliente;
