@@ -36,6 +36,11 @@ git branch -d (nome da branch): Deleta a branch (nome da branch) se ela foi mesc
 git branch -D (nome da branch): Deleta a branch (nome da branch) se ela não foi mesclada
 git push origin --delete (nome da branch) : Deleta a branch no repositório remoto
 
+git reflog: mostra o histórico de ações do repositório incluindo hash de commits feitos (para restaurar uma branch deletada por exemplo)
+git checkout -b (nome da branch) (hash do commit) : copia o commit (hash do commit) para uma nova branch chamada (nome da branch)
+
+
+
 
 
 comentário
